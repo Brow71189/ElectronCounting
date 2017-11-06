@@ -11,6 +11,5 @@ from distutils.extension import Extension
 
 setup(
       name = 'electron counting',
-      py_modules = ['ElectronCounting.electron_counting'],
       ext_modules = [Extension('ElectronCounting.c_electron_counting', ['ElectronCounting/c_electron_counting.c'])],
 )
