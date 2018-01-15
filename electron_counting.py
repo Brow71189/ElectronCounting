@@ -13,7 +13,7 @@ documentation of the `c_electron_counting` module.
 
 
 import argparse
-from scipy.misc import imread, imsave
+from scipy.misc import imread, toimage
 from ElectronCounting import c_electron_counting
 import os
 
@@ -37,7 +37,8 @@ def run(image_path, mode, baseline, countlevel, peakwidth):
     filename = os.path.basename(image_path)
     savepath = os.path.join(dirname, 'ecount_' + filename)
 
-    imsave(savepath, result)
+    im = toimage(result, mode='F')
+    im.save(savepath)
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
