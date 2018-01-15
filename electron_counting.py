@@ -51,8 +51,8 @@ def main():
     parser.add_argument('-m', '--mode', type=str, choices=['integrate', 'count', 'both'],
                         help='What processing steps should we execute on the image. Can be one of "integrate", ' +
                              '"count" or "both". Defaults to "both".')
-    parser.parse_args()
-    run(parser.image_path, parser.mode, parser.baseline, parser.countlevel, parser.peakwidth)
+    args = parser.parse_args()
+    run(args.image_path, args.mode, args.baseline, args.countlevel, args.peakwidth)
 
 if __name__ == '__main__':
     main()
