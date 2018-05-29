@@ -20,7 +20,9 @@ You should then be able to call
 ```
 from ElectronCounting import c_electron_counting
 ```
-within your python installation.
+from within your python installation.
+
+__If the installation fails with an error saying that `Python.h` is missing you might have to install the python development package. On Linux this usually means running `sudo apt install python3-dev` in a terminal.__
 
 Requirements
 ============
